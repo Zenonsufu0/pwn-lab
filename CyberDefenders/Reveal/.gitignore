@@ -1,0 +1,8 @@
+.venv/
+volatility3/
+*.dmp
+*.raw
+*.zip
+symbols/
+cache/
+__pycache__/
