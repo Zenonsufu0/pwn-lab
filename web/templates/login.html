@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            width: 500px;
+            margin: 50px auto;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        label {
+            display: block;
+            margin-top: 12px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            box-sizing: border-box;
+        }
+        button {
+            margin-top: 16px;
+            width: 100%;
+            padding: 10px;
+        }
+        .msg {
+            margin-top: 20px;
+            padding: 12px;
+            background: #f4f4f4;
+            border-radius: 8px;
+        }
+        .pw-wrap {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        .pw-wrap input {
+            flex: 1;
+        }
+        .pw-wrap button {
+            width: auto;
+            margin-top: 6px;
+            padding: 10px 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ title }}</h1>
+
+    <form method="POST" action="{{ action_url }}">
+        <label for="id">아이디</label>
+        <input type="text" id="id" name="id" required>
+
+        <label for="pw">비밀번호</label>
+        <div class="pw-wrap">
+            <input type="password" id="pw" name="pw" required>
+            <button type="button" onclick="togglePassword()">보기</button>
+        </div>
+
+        <button type="submit">로그인</button>
+    </form>
+
+    {% if message %}
+    <div class="msg">
+        {{ message }}
+    </div>
+    {% endif %}
+
+    <script>
+        function togglePassword() {
+            const pw = document.getElementById("pw");
+            pw.type = pw.type === "password" ? "text" : "password";
+        }
+    </script>
+</body>
+</html>
