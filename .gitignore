@@ -1,0 +1,28 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Compiled / object files
+*.o
+*.out
+
+# GDB
+.gdb_history
+
+# Windows Zone.Identifier (NTFS alternate data stream)
+*:Zone.Identifier
+
+# Temp
+*.tmp
+test.txt
+
+# Forensics artifacts (large files)
+*.dmp
+*.raw
+*.vmem
+*.mem
+
+# macOS
+.DS_Store

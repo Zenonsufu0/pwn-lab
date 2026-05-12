@@ -6,7 +6,7 @@
 - mkdir chall_xxxx
 - cd chall_xxxx
 2. template 복사 → notes.md
-- cp ../template.md notes.md
+- cp ../../template/notes.md notes.md
 3. solve.py 작성
 - touch solve.py
 4. 실행 및 디버깅
