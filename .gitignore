@@ -26,3 +26,8 @@ test.txt
 
 # macOS
 .DS_Store
+pwnenv/
+pwndbg/
+__pycache__/
+*.pyc
+core
