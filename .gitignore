@@ -31,3 +31,6 @@ pwndbg/
 __pycache__/
 *.pyc
 core
+
+# Challenge binaries (ELF)
+dreamhack/wargame/chall_353/rtl
